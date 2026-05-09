@@ -1,0 +1,50 @@
+# Автоматически нормализовать окончания строк
+* text=auto
+
+# Конкретные типы файлов
+*.py text diff=python
+*.json text
+*.md text diff=markdown
+*.txt text
+*.rst text
+*.yaml text
+*.yml text
+
+# Изображения как бинарные
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg binary
+
+# Файлы данных как бинарные
+*.db binary
+*.sqlite binary
+
+# Шаблоны
+*.tmpl text
+
+# Конфигурационные файлы
+*.cfg text
+*.ini text
+*.conf text
+
+# Универсальные правила для разных ОС
+# Отключить автоопределение для общих текстовых файлов
+*.sh text eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Чистое текстовое содержимое для линтинга (контроль пробелов)
+# Убрать лишние пробелы, которые могут вызвать проблемы
+*.py whitespace=trailing-space,space-before-tab,-indent-with-non-tab,tab-in-indent
+*.js whitespace=trailing-space,space-before-tab,-indent-with-non-tab,tab-in-indent
+*.html whitespace=trailing-space,space-before-tab,-indent-with-non-tab,tab-in-indent
+
+# Максимальная длина строк (для лучшей читаемости)
+*.md whitespace=trailing-space,space-before-tab,-indent-with-non-tab,tab-in-indent
+
+# Лучший контроль для JSON
+*.json whitespace=trailing-space,space-before-tab,-indent-with-non-tab,tab-in-indent
